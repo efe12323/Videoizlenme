@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7/24 Otonom İzleniyor</title>
+  <style>
+    body, html { 
+      margin:0; padding:0; height:100%; background:#000;
+      display:flex; justify-content:center; align-items:center;
+    }
+    iframe { 
+      width:100vw;
+      height:100vh;
+      border:none;
+    }
+  </style>
+</head>
+<body>
+
+  <iframe 
+    src="https://www.youtube.com/embed/?list=PLNINH57OxKXDKQQaQD6ElE17sxQPn8_ao&autoplay=1&mute=1&loop=1&playlist=PLNINH57OxKXDKQQaQD6ElE17sxQPn8_ao&controls=1&rel=0&modestbranding=1&iv_load_policy=3"
+    allow="autoplay; encrypted-media; fullscreen"
+    allowfullscreen>
+  </iframe>
+
+  <script src="https://cdn.jsdelivr.net/npm/nosleep.js@0.12.0/dist/NoSleep.min.js"></script>
+  <script>
+    var noSleep = new NoSleep();
+    noSleep.enable();
+
+    setInterval(function() {
+      if (document.hidden) {
+        document.dispatchEvent(new Event('visibilitychange'));
+      }
+    }, 30000);
+  </script>
+
+</body>
+</html>
